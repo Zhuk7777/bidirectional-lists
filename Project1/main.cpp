@@ -35,6 +35,9 @@ void sortList(TList& head,int elem) {
     clear(head, tail);
 
     head = findHead(beg);
+   
+    if (head == beg)
+        head = head->next;
 
     deleteCurrentNode(beg);
     deleteCurrentNode(end);
