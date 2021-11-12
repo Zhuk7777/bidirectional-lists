@@ -20,13 +20,13 @@ void sortList(TList& head,int elem) {
     while (p)
     {
         if (p->data < elem)
-            addBeforBeg(beg, elem);
+            addBeforBeg(beg, p->data);
 
         if (p->data > elem)
-            addAfterEnd(end, elem);
+            addAfterEnd(end, p->data);
 
         if (p->data == elem)
-            addAfterBeg(beg, elem);
+            addAfterBeg(beg, p->data);
 
         p = p->next;
     }

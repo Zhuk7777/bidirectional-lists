@@ -152,7 +152,6 @@ void clear(TList& head, TList& tail)
 		deleteAfterNode(head, tail);
 	delete head;
 	head = nullptr;
-	delete tail;
 	tail = nullptr;
 }
 
