@@ -20,7 +20,7 @@ void sortList(TList& head,int elem) {
     while (p)
     {
         if (p->data < elem)
-            addBeforBeg(beg, p->data);
+            addBeforeBeg(beg, p->data);
 
         if (p->data > elem)
             addAfterEnd(end, p->data);
@@ -61,6 +61,9 @@ int main()
     sortList(head, c);
 
     printList(head);
+
+    std::cout << "В обратном порядке:\n";
+    printListReverse(findTail(head));
 
     return 0;
 }

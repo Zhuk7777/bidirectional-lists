@@ -25,7 +25,7 @@ void addAfterNode(TList pNode, int elem)
 		p->next->prev = p;
 }
 
-void addBeforBeg(TList beg, int elem)
+void addBeforeBeg(TList beg, int elem)
 {
 	TList p = new Node;
 	p->data = elem;
@@ -100,20 +100,17 @@ void deleteCurrentNode(TList& pNode)
 {
 	TList p = pNode;
 	if (p->prev != nullptr)
-	{
 		p->prev->next = p->next;
-		p->prev = nullptr;
-	}
+	
 	else
 		pNode = pNode->next;
 
 	if (p->next != nullptr)
-	{
 		p->next->prev = p->prev;
-		p->next = nullptr;
-	}
 	else
 		pNode = pNode->prev;
+	p->prev = nullptr;
+	p->next = nullptr;
 	delete p;
 	p = nullptr;
 }
@@ -138,6 +135,16 @@ void printList(TList head)
 	{
 		std::cout << p->data << " ";
 		p = p->next;
+	}
+	std::cout << std::endl;
+}
+
+void printListReverse(TList tail)
+{
+	if (tail)
+	{
+		std::cout << tail->data << " ";
+		printListReverse(tail->prev);
 	}
 }
 

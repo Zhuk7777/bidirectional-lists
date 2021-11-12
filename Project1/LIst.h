@@ -9,7 +9,7 @@ typedef Node* TList;
 void addBeforeNode(TList& head, int elem);
 void addAfterNode(TList pNode, int elem);
 
-void addBeforBeg(TList beg, int elem);
+void addBeforeBeg(TList beg, int elem);
 void addAfterBeg(TList beg, int elem);
 void addAfterEnd(TList end, int elem);
 
@@ -22,6 +22,7 @@ void init(TList& head, int elem);
 bool isEmpty(TList head);
 
 void printList(TList head);
+void printListReverse(TList tail);
 
 void clear(TList& head, TList& tail);
 
