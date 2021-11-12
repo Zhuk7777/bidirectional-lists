@@ -133,11 +133,6 @@ bool isEmpty(TList head)
 
 void printList(TList head)
 {
-	/*while (head != nullptr)
-	{
-		std::cout << head->data << " ";
-		head = head->next;
-	}*/
 	TList p = head;
 	while (p != nullptr)
 	{
@@ -171,8 +166,6 @@ void create(TList& head, int n)
 		tail = tail->next;
 
 	}
-	//return tail;
-	//tail->next = nullptr;
 }
 
 TList& findTail(TList head)
