@@ -1,7 +1,7 @@
 #include "List.h"
 #include <iostream>
 
-void addBeforeNode(TList& pNode, int elem)
+void addBeforeNode(TList pNode, int elem)
 {
 	TList p = new Node;
 	p->data = elem;
@@ -10,8 +10,6 @@ void addBeforeNode(TList& pNode, int elem)
 	pNode->prev = p;
 	if (p->prev != nullptr)
 		p->prev->next = p;
-	else
-		pNode = p;
 }
 
 void addAfterNode(TList pNode, int elem)
@@ -107,8 +105,6 @@ void deleteCurrentNode(TList& pNode)
 
 	if (p->next != nullptr)
 		p->next->prev = p->prev;
-	else
-		pNode = pNode->prev;
 	p->prev = nullptr;
 	p->next = nullptr;
 	delete p;

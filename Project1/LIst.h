@@ -6,7 +6,7 @@ struct Node
 	Node* prev;
 };
 typedef Node* TList;
-void addBeforeNode(TList& head, int elem);
+void addBeforeNode(TList pNode, int elem);
 void addAfterNode(TList pNode, int elem);
 
 void addBeforeBeg(TList beg, int elem);
